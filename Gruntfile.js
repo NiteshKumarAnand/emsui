@@ -619,7 +619,7 @@ module.exports = function ( grunt ) {
   grunt.registerTask( 'build', [
     'clean', 'html2js', 'jshint', 'coffeelint', 'coffee', 'less:build',
     'concat:build_css', 'copy:build_app_assets', 'copy:build_vendor_assets', 'copy:build_appjs', 'copy:build_vendorjs',
-    'copy:build_dev_mockjs', 'copy:build_vendorcss', 'copy:build_webxml', 'index:build', 'karmaconfig',
+    'copy:build_dev_mockjs', 'copy:build_vendorcss', /*'copy:build_webxml',*/ 'index:build', 'karmaconfig',
     'karma:continuous'
   ]);
 
@@ -628,7 +628,7 @@ module.exports = function ( grunt ) {
    * minifying your code.
    */
   grunt.registerTask( 'compile', [
-    'less:compile', 'copy:compile_assets', 'copy:compile_webxml', 'ngAnnotate', 'concat:compile_js', 'uglify', 'index:compile'
+    'less:compile', 'copy:compile_assets', /*'copy:compile_webxml',*/ 'ngAnnotate', 'concat:compile_js', 'uglify', 'index:compile'
   ]);
 
   /**

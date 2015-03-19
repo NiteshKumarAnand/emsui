@@ -15,12 +15,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.0.2</version>
+                <version>2.6</version>
                 <configuration>
+		    <failOnMissingWebXml>false</failOnMissingWebXml>
                     <webResources>
                         <resource>
                             <directory>${basedir}/${sourceDir}</directory>
-                            <targetPath>WEB-INF</targetPath>
+                            <targetPath></targetPath>
                         </resource>
                     </webResources>
                 </configuration>
