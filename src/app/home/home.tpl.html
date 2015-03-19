@@ -1,0 +1,34 @@
+<h1>User information:</h1>
+<div>
+    <div>
+        <label for="userinfo">
+            Enter id of the user for which you want to fetch the infomation
+        </label>
+        <div>
+            <input id="userinfo" type="text" placeholder="Enter id" data-ng-model="info.id">
+            <button ng-click="findUser()">Fetch information</button>
+        </div>
+    </div>
+    ======================================
+    <div>
+        <label for="userbyfirst">
+            Enter firstname of the user of which you want to fetch the infomation
+        </label>
+        <div>
+            <input id="userbyfirst" type="text" placeholder="Enter firstname" data-ng-model="info.firstname">
+            <button ng-click="findUserByFirstName()">Fetch information</button>
+        </div>
+    </div>
+    <div>
+        <h3>
+            {{firstnames}}
+        </h3>
+    </div>
+    <h1>Results</h1>
+    <div>
+        <h3 data-ng-repeat="user in users">
+            {{user}}
+        </h3>
+    </div>
+</div>
+

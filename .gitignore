@@ -1,0 +1,9 @@
+*.sw*
+*~
+build/
+bin/
+node/
+node_modules/
+vendor/
+.idea
+*.orig

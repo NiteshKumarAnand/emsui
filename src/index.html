@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="emsui" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="collapse navbar-collapse" collapse="menuCollapsed">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active">
+              <a href ui-sref="home">
+                <i class="fa fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="about">
+                <i class="fa fa-info-circle"></i>
+                What is it?
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <header>
+        <div class="container" ui-view="header"></div>
+    </header>
+    <article>
+        <div class="container" ui-view="main"></div>
+    </article>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner" ui-view="footer"></div>
+      </div>
+    </footer>
+  </body>
+</html>
