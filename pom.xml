@@ -6,6 +6,9 @@
     <artifactId>emsui</artifactId>
     <version>0.1</version>
     <packaging>pom</packaging>
+    <properties>
+	<sourceDir>bin</sourceDir>
+    </properties>
 
     <build>
         <plugins>
@@ -16,7 +19,7 @@
                 <configuration>
                     <webResources>
                         <resource>
-                            <directory>${basedir}/bin</directory>
+                            <directory>${basedir}/${sourceDir}</directory>
                             <targetPath>WEB-INF</targetPath>
                         </resource>
                     </webResources>
