@@ -1,6 +1,5 @@
 angular.module( 'emsui.about', [
   'ui.router',
-  'placeholders',
   'ui.bootstrap'
 ])
 
